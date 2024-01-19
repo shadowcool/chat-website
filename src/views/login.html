@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Website | Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">    
+</head>
+<body>
+    <section>
+        <div class="signin">
+            <div class="content">
+                <h2>Sign In</h2>
+
+                <div class="form" id="form">
+                    <div class="inputBox">
+                        <input type="text" id="username" required>
+                        <i>Username</i>
+                    </div>
+                    <div class="inputBox">
+                        <input id="submit" type="submit" value="Login">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script>
+        const submitBtn = document.getElementById('submit');
+
+        submitBtn.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            if(!username || username === '') {
+                return alert('Username must be provided');
+            }
+
+            document.cookie = `username=${username}; path=/`;
+
+            window.location.href = '/';
+        })
+    </script>
+</body>
+</html>

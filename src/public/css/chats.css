@@ -1,0 +1,172 @@
+.chats-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: cornflowerblue;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.current-chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chat {
+    margin-bottom: 5%;
+}
+
+.chats-list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.chat-header-container {
+    position: relative;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    height: 7.5%;
+    background-color: white;
+}
+
+.message-content {
+    margin-left: 2px;
+    padding: 0;
+}
+
+.message-left {
+    margin-right: auto;
+}
+
+.message-right {
+    margin-left: auto;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    max-width: 50%;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.chat-footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    height: 6%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.messages-container {
+    padding-bottom: 15%;
+    box-sizing: border-box;
+}
+
+.messages {
+    height: 100%;   
+}
+
+.input-chat {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.input-btn-container {
+    display: flex;  
+    align-items: stretch;
+}
+
+.input-btn {
+    flex: 1;
+    border: none;
+    background-color: #e6e6e6;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.chat-header {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    top: 0;
+    position: absolute;
+}
+
+.chat-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 7.5% - 6% - 10px);
+    overflow-y: scroll;
+    margin-bottom: 0;
+}
+
+.chat-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.messages, .chats {
+    list-style-type: none;
+}
+
+.chats-list {
+    width: 20%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+    border-right: 1px solid #e6e6e6;
+}
+
+.chat-avatar-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .chats-list {
+        display: none;
+    }    
+}
